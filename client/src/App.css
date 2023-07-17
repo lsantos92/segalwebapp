@@ -1,0 +1,336 @@
+:root {
+    --dark: rgb(13, 27, 42);
+    --darkblue: rgb(27, 38, 59);
+    --blue: rgb(65, 90, 119);
+    --lightblue: rgb(119, 141, 169);
+    --light: rgb(224, 225, 221);
+
+}
+
+/**** WELCOME PAGE ****/
+.hero-welcome {
+    height: 50vh;
+    background-image: url('./assets/images/gnss-images/gnss9.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.container-welcome {
+    margin: 1rem;
+    background-color: rgba(0, 0, 0, 0.50);
+    border-radius: 1rem;
+    padding: 1rem;
+
+}
+
+.text-welcome h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.text-welcome p {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.text-welcome h1,
+.text-welcome p {
+    color: #fff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.welcome-card {
+    padding: 1rem 0;
+    margin: -6rem 1rem 1rem 1rem;
+}
+
+.welcome-card .card {
+    transition: box-shadow 0.2s ease;
+}
+
+.welcome-card .card:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.welcome-card .card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--darkblue);
+}
+
+.welcome-card .card-text {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: grey;
+}
+
+.welcome-card .btn-dark {
+    background-color: var(--darkblue);
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.welcome-card .btn-dark:hover {
+    background-color: var(--blue);
+}
+
+/**** GRC HOMEPAGE ****/
+
+/** HERO SECTION **/
+.hero {
+    height: 50vh;
+    background-image: url('./assets/images/gnss-images/gnss8.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 1rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 2rem;
+    padding: 0 4rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/** SERVICES SECTION **/
+
+.services {
+    padding: 2rem 0;
+}
+
+.title_serv {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title_serv h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--darkblue);
+    margin-bottom: 1rem;
+}
+
+.title_serv p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: grey;
+}
+
+.cards {
+    padding: 0rem 2rem;
+}
+
+.card {
+    transition: box-shadow 0.2s ease;
+    margin: 0.5rem;
+}
+
+.card:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.card .card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--darkblue);
+    margin-bottom: 1rem;
+}
+
+.card .card-text {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: grey;
+    margin-bottom: 2rem;
+}
+
+.card .btn-dark {
+    background-color: var(--darkblue);
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.card .btn-dark:hover {
+    background-color: var(--blue);
+}
+
+/****  HOLDINGS PAGE ****/
+
+.header-holding {
+    background-color: var(--darkblue);
+    color: white;
+    text-align: center;
+}
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+/**** FOOTER ****/
+.footer-clean {
+    padding: 1rem 0;
+    background-color: #fff;
+    color: #4b4c4d;
+    bottom: 0;
+    height: 30vh;
+}
+
+.footer-clean h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.footer-clean ul {
+    padding: 0;
+    list-style: none;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.footer-clean ul li {
+    color: inherit;
+    opacity: 0.8;
+}
+
+.footer-clean ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer-clean ul a:hover {
+    opacity: 1;
+}
+
+.footer-clean .item.social {
+    text-align: right;
+}
+
+@media (max-width:767px) {
+    .footer-clean .item {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-clean .item.social {
+        text-align: center;
+    }
+}
+
+/*****NAVBAR *****/
+
+.navbar-custom {
+    background-color: var(--darkblue);
+}
+
+.navbar-custom .navbar-brand {
+    font-weight: bold;
+
+}
+
+#nav-dropdown {
+    color: white;
+}
+
+/***** FOOTER ****/
+
+.footer-clean .item .social a {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+    margin-top: 22px;
+    color: inherit;
+    opacity: 0.75;
+}
+
+.footer-clean .item .social a:hover {
+    opacity: 0.9;
+}
+
+@media (max-width:991px) {
+    .footer-clean .item .social a {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width:767px) {
+    .footer-clean .item .social a {
+        margin-top: 10px;
+    }
+}
+
+.footer-clean .copyright {
+    margin-top: 14px;
+    margin-bottom: 0;
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+/**** HOLDINGS ****/
+
+.sort-arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border: 4px solid transparent;
+}
+
+.sort-arrow.up {
+    border-bottom-color: #000;
+}
+
+.sort-arrow.down {
+    border-top-color: #000;
+}
+
+/**** FILE BROWSER ****/
+
+.table-col-left {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.table-wrapper {
+    position: relative;
+}
+
+.table-col-right {
+    position: sticky;
+    top: 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
