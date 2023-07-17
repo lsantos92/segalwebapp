@@ -14,6 +14,10 @@ const parsedURL = new URL(process.env.GRC_URL);
 const port = parsedURL.port || 2222;
 const { host, username, password } = parsedURL;
 
+/**
+ * @constant sftpConfig
+ * @description Configuração do SFTP
+ */
 const sftpConfig = {
     host: host,
     port: port,
@@ -22,6 +26,10 @@ const sftpConfig = {
     // debug: console.log
 };
 
+/**
+ * @Route /api
+ * @description Rota de teste
+ */
 
 app.get('/api', (req, res) => {
     res.json({ message: 'Hello World' })
@@ -32,8 +40,7 @@ app.get('/api', (req, res) => {
 
 /**
  * @Route /root_ftp
- * @param {string} path - Path to the directory to be listed
- * @returns {Object[]} - Array of objects
+ * @description Obtém os ficheiros de uma diretoria do servidor SFTP
  */
 
 app.get('/root_ftp', async (req, res) => {
@@ -57,9 +64,7 @@ app.get('/root_ftp', async (req, res) => {
 
 /**
  * @Route /single
- * @param {string} path - Path to the file to be downloaded
- * @returns {Object[]} - Array of objects
- * @description Download a single file from the SFTP server
+ * @description Transfere um ficheiro do servidor SFTP para o cliente
  */
 
 app.get('/single', async (req, res) => {
@@ -83,6 +88,10 @@ app.get('/single', async (req, res) => {
     }
 });
 
+/**
+ * @Route /stations
+ * @description Obtém as estações disponíveis no servidor SFTP
+*/
 
 app.get('/stations', (req, res) => {
     const client = new sftp();
@@ -103,7 +112,9 @@ app.get('/stations', (req, res) => {
         })
 });
 
-
+/**
+ * @description Inicia o servidor na porta 3001
+ */
 
 const server_port = process.env.SERVER_PORT || 3001;
 app.listen(server_port, () => console.log(`Server listening on port ${server_port} `))

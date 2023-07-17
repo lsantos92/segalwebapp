@@ -4,7 +4,6 @@ import './App.css'
 
 // Pages
 import HomeGRC from './pages/Grc'
-import Links from './pages/Links'
 import FileBrowser from './pages/FileBrowser'
 import Holdings from './pages/Holdings'
 import Welcome from './pages/Welcome'
@@ -16,8 +15,14 @@ import Footer from './components/Footer'
 import MaybeShowNavBar from './components/MaybeShowNavBar'
 import NotFound from './components/404'
 
-function App() {
+/**
+ * 
+ * @function App
+ * @description Componente principal
+ * @description Define as rotas da aplicação
+ */
 
+function App() {
   return (
     <>
       <BrowserRouter>
@@ -34,7 +39,6 @@ function App() {
           {/*Stream List */}
           <Route path="/holdings" element={<Holdings />} />
           {/* teste data */}
-          <Route path="/links" element={<Links />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

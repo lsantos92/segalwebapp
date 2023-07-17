@@ -5,6 +5,12 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import conn from "../../api/connection";
 
+
+/**
+ * 
+ * @description Componente da página de pesquisa de ficheiros RINEX
+ * @description EM FASE DE DESENVOLVIMENTO
+ */
 function RinexSearch() {
     // States
     const [data, setData] = useState([]);
@@ -55,7 +61,6 @@ function RinexSearch() {
             return;
         }
         setIsVisible(true);
-        // search all files with station name on name file
 
         const res = await conn.get(`/rinex?query=${selectedStations}`);
         const data = res.data;

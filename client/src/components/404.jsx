@@ -1,6 +1,12 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 
+/**
+ * @description Página de erro 404
+ * @returns 404 page
+ */
+
+
 function NotFound() {
     return (
         <div className="d-flex align-items-center justify-content-center vh-100">

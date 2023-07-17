@@ -2,6 +2,14 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import * as Icon from "react-bootstrap-icons";
 
+/**
+ * @function Footer
+ * @description Componente do rodapé
+ * @returns Footer
+ */
+
+
+
 function Footer() {
     return (
         <>

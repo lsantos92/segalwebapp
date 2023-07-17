@@ -5,9 +5,14 @@ import { Container, Card, Col, Row, Table, Spinner } from "react-bootstrap"
 import * as Icon from "react-bootstrap-icons"
 import conn from '../api/connection'
 
+/**
+ * 
+ * @function TableBrowser
+ * @description Componente da tabela de navegação
+ * @returns TableBrowser
+ */
+
 function TableBrowser() {
-
-
     const [data, setData] = useState([]);
     const [currentPath, setCurrentPath] = useState("");
     const [selectedFile, setSelectedFile] = useState(null);
@@ -25,10 +30,7 @@ function TableBrowser() {
     /**
      * @function fetchData
      * @description Função que faz o fetch dos dados da diretoria atual
-     * @returns {Array} Array com os dados da diretoria atual
-     * @returns {String} Array com os dados da diretoria atual
      */
-
     const fetchData = () => {
         setIsLoading(true);
         conn
@@ -45,12 +47,9 @@ function TableBrowser() {
     };
 
     /**
-     * 
      * @function handleItemClick
-     * @param {*} item 
      * @description Função que faz o update do estado do ficheiro selecionado e da diretoria atual
      */
-    
     const handleItemClick = (item) => {
         if (item.type === "d") {
             setCurrentPath(`${currentPath}/${item.name}`);
@@ -145,7 +144,6 @@ function TableBrowser() {
                                 </tbody>
                             )}
                         </Table>
-
                         {isLoading && (
                             <div className="spinner-container">
                                 <Spinner

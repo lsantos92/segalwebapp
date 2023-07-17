@@ -9,14 +9,26 @@ const parsedURL = new URL(process.env.GRC_URL);
 const port = parsedURL.port || 2222;
 const { host, username, password } = parsedURL;
 
+/**
+ * @constant sftp_config
+ * @description Configuração do SFTP
+ */
 const sftp_config = {
     host: host,
     port: port,
     username: username,
     password: password
 };
-
+/**
+ * @constant client
+ * @description Criação do cliente SFTP
+ */
 const client = new sftp();
+
+/**
+ * @function getAllFileDetails
+ * @description Obtém os detalhes de todos os ficheiros de uma diretória e guarda num ficheiro JSON
+ */
 
 async function getAllFileDetails(remoteDir) {
 
@@ -26,10 +38,6 @@ async function getAllFileDetails(remoteDir) {
         const fileDetails = await traverseDirectory(client, remoteDir);
         const jsonContent = JSON.stringify(fileDetails, null, 2);
 
-        // Cria uma pasta temporária
-        //const tmpDir = tmp.dirSync({ unsafeCleanup: true });
-
-        // Define o caminho do arquivo de saída como um arquivo dentro da pasta temporária
         const outputFilePath = path.join('./', 'grc_repo.json');
         console.log(outputFilePath)
 
@@ -39,11 +47,13 @@ async function getAllFileDetails(remoteDir) {
         console.error(err);
     } finally {
         await client.end();
-        //tmpDir.removeCallback(); // Remove a pasta temporária após o uso
     }
 }
-
-async function traverseDirectory(client, directory) {
+/**
+ * @function throughDirectory
+ * @description Percorre o diretório recursivamente e retorna um array de objetos com os detalhes de cada arquivo
+ */
+async function throughDirectory(client, directory) {
     const fileDetails = [];
     const stack = [directory];
 
@@ -64,7 +74,6 @@ async function traverseDirectory(client, directory) {
                     size: file.size,
                     modifiedTime: file.modifyTime,
                     description: file.description,
-                    // Adicione outras propriedades que desejar obter
                 };
                 fileDetails.push(fileDetail);
             }
@@ -74,7 +83,6 @@ async function traverseDirectory(client, directory) {
     return fileDetails;
 }
 
-// Uso da função
-const remoteDirectory = process.env.GRC_DIR; // Diretório remoto a percorrer
+const remoteDirectory = process.env.GRC_DIR;
 
 getAllFileDetails(remoteDirectory);

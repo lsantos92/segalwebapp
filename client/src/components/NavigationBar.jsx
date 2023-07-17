@@ -3,6 +3,12 @@ import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import * as Icon from "react-bootstrap-icons"
 
+
+/**
+ * @function NavigationBar
+ * @description Componente da barra de navegação
+ * @returns NavigationBar
+ */
 function NavigationBar() {
     return (
         <Navbar collapseOnSelect expand="lg" variant="dark" className="navbar-custom p-2">

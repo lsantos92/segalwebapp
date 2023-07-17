@@ -2,6 +2,12 @@ import React from "react";
 import { Card, Button, CardGroup } from "react-bootstrap";
 import Container from "../../components/Container";
 
+/**
+ * @function Welcome
+ * @description Componente da página de boas-vindas
+ */
+
+
 function Welcome() {
     return (
         <>

@@ -2,9 +2,12 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import TableBrowser from "../../components/Table";
 
+/**
+ * @function FileBrowser
+ * @description Componente da página de navegação de ficheiros
+ */
+
 function FileBrowser() {
-
-
     return (
         <div>
             <Card>

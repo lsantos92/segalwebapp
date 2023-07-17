@@ -9,7 +9,6 @@ function DataProducts() {
     return (
         <div>
             <h1>LINKS</h1>
-         
         </div>
     )
 }

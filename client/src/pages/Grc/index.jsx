@@ -2,6 +2,12 @@ import React from "react";
 import { Col, Row, Button, Card, CardGroup } from "react-bootstrap";
 import Container from "../../components/Container";
 
+/**
+ * @function HomeGRC
+ * @description Componente da página de boas-vindas do GRC
+ * 
+ */
+
 function HomeGRC() {
     return (
         <>

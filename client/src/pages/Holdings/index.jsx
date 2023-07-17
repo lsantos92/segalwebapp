@@ -1,7 +1,11 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 
-
+/**
+ * @function Holdings
+ * @description Componente da página de Holdings
+ * @description Tabela de dados e produtos disponiveis no portal
+ */
 
 
 function Holdings() {
