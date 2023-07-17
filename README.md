@@ -20,7 +20,7 @@ Após a instalação das dependências, é necessário executar o seguinte coman
 ```bash
 npm run dev
 ```
-Após a execução do comando, o servidor estará a correr na porta 3000.
+Após a execução do comando, o servidor estará a correr na porta 3001.
 
 Depois de configurar o servidor, é necessário configurar o cliente. Para isso, basta aceder à pasta do projeto e dentro da mesma aceder à pasta `client` e executar o seguinte comando:
 ```bash
